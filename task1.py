@@ -59,6 +59,16 @@ print(f'ч : м : с - {hours} : {minutes} : {seconds}')
 Введите число n: 3
 n + nn + nnn = 369
 
+"""
+
+number = input('Введите целое положительное число n: ')
+summa_value = int(number) + int(number * 2) + int(number * 3)
+print(f'n + nn + nnn = {summa_value}')
+
+
+
+"""
+
 Задание 4.
 
 Запросите у пользователя значения выручки и издержек фирмы.
