@@ -15,6 +15,21 @@
 Введите ваш возраст: 45
 Ваши данные для входа в аккаунт: имя - Василий, пароль - vas, возраст - 45
 
+"""
+
+name = 'Валентина'
+age = 46
+print(f'Имя: {name}, возраст: {age}')
+
+name = input('Введите Ваше имя: ')
+password = input('Введите Ваш пароль: ')
+age = input('Введите Ваш возраст: ')
+
+print(f'Ваши данные для входа в аккаунт: имя - {name}, пароль - {password}, возраст - {age}')
+
+
+"""
+
 Задание 2.
 
 Пользователь вводит время в секундах.
@@ -25,6 +40,16 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 
+"""
+
+seconds = int(input('Введите время в секундах: '))
+minutes = round(seconds / 60, 0)
+hours = round(minutes / 60, 0)
+
+print(f'ч : м : с - {hours} : {minutes} : {seconds}')
+
+"""
+
 Задание 3.
 
 Узнайте у пользователя целое положительное число n.
@@ -33,6 +58,16 @@
 Пример:
 Введите число n: 3
 n + nn + nnn = 369
+
+"""
+
+number = input('Введите целое положительное число n: ')
+summa_value = int(number) + int(number * 2) + int(number * 3)
+print(f'n + nn + nnn = {summa_value}')
+
+
+
+"""
 
 Задание 4.
 
@@ -53,5 +88,21 @@ n + nn + nnn = 369
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+
+revenue = int(input('Введите выручку фирмы: '))
+cost = int(input('Введите издержки фирмы: '))
+
+financial_result = revenue - cost
+
+if financial_result > 0:
+    print(f'Финансовый результат - прибыль. Ее величина: {financial_result}')
+    profitability = financial_result / revenue
+    print(f'Рентабельность выручки: {profitability}')
+    employees = int(input('Введите численность сотрудников фирмы: '))
+    print(f'Прибыль фирмы в расчете на одного сотрудника: {financial_result / employees}')
+elif financial_result < 0:
+    print(f'Финансовый результат - убыток. Его величина: {-financial_result}')
+else:
+    print(f'Финансовый результат - безубыточность')
 
 
