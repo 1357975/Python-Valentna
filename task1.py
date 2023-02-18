@@ -89,4 +89,20 @@ print(f'n + nn + nnn = {summa_value}')
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
 
+revenue = int(input('Введите выручку фирмы: '))
+cost = int(input('Введите издержки фирмы: '))
+
+financial_result = revenue - cost
+
+if financial_result > 0:
+    print(f'Финансовый результат - прибыль. Ее величина: {financial_result}')
+    profitability = financial_result / revenue
+    print(f'Рентабельность выручки: {profitability}')
+    employees = int(input('Введите численность сотрудников фирмы: '))
+    print(f'Прибыль фирмы в расчете на одного сотрудника: {financial_result / employees}')
+elif financial_result < 0:
+    print(f'Финансовый результат - убыток. Его величина: {-financial_result}')
+else:
+    print(f'Финансовый результат - безубыточность')
+
 
